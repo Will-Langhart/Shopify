@@ -1,0 +1,24 @@
+{
+  "steps": [
+    {
+      "step": "Create a Custom App",
+      "description": "Build a custom app or script to interact with Shopify API."
+    },
+    {
+      "step": "Authenticate with Shopify API",
+      "description": "Use API credentials from the custom app to authenticate."
+    },
+    {
+      "step": "Implement Account Activation Logic",
+      "description": "Handle customer account activation within the app."
+    },
+    {
+      "step": "Expose Data via an Endpoint",
+      "description": "Set up a custom endpoint on your website to trigger activation logic."
+    },
+    {
+      "step": "Fetch Data in JavaScript",
+      "description": "Use JavaScript to fetch JSON data and provide status messages on your site."
+    }
+  ]
+}
