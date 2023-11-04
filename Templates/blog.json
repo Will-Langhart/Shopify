@@ -6,6 +6,4 @@
         {
           "title": "{{ article.title | json }}",
           "content": "{{ article.content | strip_html | escape | json }}"
-    ]
   }
-}
