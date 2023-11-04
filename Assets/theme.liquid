@@ -1,1 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ page_title }}</title>
+  <link rel="stylesheet" href="{{ 'main.css' | asset_url }}">
+  <!-- Add your other meta tags, stylesheets, and scripts here -->
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <nav>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/about">About Us</a></li>
+        <li><a href="/services">Services</a></li>
+        <li><a href="/contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    {{ content_for_layout }}
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; {{ 'now' | date: '%Y' }} Friz AI</p>
+  </footer>
+
+  <!-- Add your scripts and other elements here -->
+</body>
+</html>
 
