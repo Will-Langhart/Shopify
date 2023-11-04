@@ -1,0 +1,15 @@
+{
+  "collection": {
+    "title": "{{ collection.title | json }}",
+    "products": [
+        {
+          "title": "{{ product.title | json }}",
+          "handle": "{{ product.handle }}",
+          "image": "{{ product.featured_image | img_url: 'large' | json }}"
+    ]
+  }
+}
+{
+  "error": "Collection not found"
+}
+
