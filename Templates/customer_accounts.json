@@ -1,0 +1,28 @@
+{
+  "steps": [
+    {
+      "step": "Create a Private App",
+      "description": "In your Shopify admin, create a private app to access customer data."
+    },
+    {
+      "step": "Authenticate with Shopify API",
+      "description": "Use API credentials from the private app to authenticate with Shopify."
+    },
+    {
+      "step": "Retrieve Customer Data",
+      "description": "Use authenticated API connection to fetch customer account information."
+    },
+    {
+      "step": "Format Data as JSON",
+      "description": "Format the retrieved data as JSON in your script."
+    },
+    {
+      "step": "Expose Data via an Endpoint",
+      "description": "Set up a custom endpoint on your website to trigger the script."
+    },
+    {
+      "step": "Fetch Data in JavaScript",
+      "description": "Use JavaScript to fetch JSON data and display it on your site."
+    }
+  ]
+}
