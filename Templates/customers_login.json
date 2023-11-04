@@ -1,10 +1,15 @@
-{
+ {
   "sections": {
     "main": {
       "type": "main-login",
       "settings": {
         "padding_top": 36,
-        "padding_bottom": 36
+        "padding_bottom": 36,
+        "background_color": "#f0f0f0",
+        "text_color": "#333",
+        "font_size": 16,
+        "button_color": "#ff6600",
+        "button_text_color": "#fff"
       }
     }
   },
