@@ -1,0 +1,11 @@
+{
+  "cart": {
+    "items": [
+        {
+          "title": "{{ item.product.title | json }}",
+          "quantity": {{ item.quantity }},
+          "price": {{ item.final_price | money_without_currency | json }}
+    ],
+    "total_price": {{ cart.total_price | money_without_currency | json }}
+  }
+}
