@@ -1,13 +1,7 @@
-{% layout none %}
 
-{%- capture json_response -%}
 {
   "error": {
     "code": "404",
     "message": "Page not found"
   }
 }
-{%- endcapture -%}
-
-{{ json_response | json }}
-
