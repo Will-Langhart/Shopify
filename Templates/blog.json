@@ -1,0 +1,14 @@
+
+{
+  "blog": {
+    "title": "{{ blog.title | json }}",
+    "articles": [
+      {% for article in blog.articles %}
+        {
+          "title": "{{ article.title | json }}",
+          "content": "{{ article.content | strip_html | escape | json }}"
+        }{% unless forloop.last %},{% endunless %}
+      {% endfor %}
+    ]
+  }
+}
