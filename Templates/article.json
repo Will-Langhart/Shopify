@@ -1,4 +1,3 @@
-{% layout none %}
 {
   "article": {
     "title": "{{ article.title | json }}",
