@@ -1,0 +1,7 @@
+{% layout none %}
+{
+  "article": {
+    "title": "{{ article.title | json }}",
+    "content": "{{ article.content | json }}"
+  }
+}
