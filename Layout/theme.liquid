@@ -6,6 +6,22 @@
   <title>{{ page_title }}</title>
   <link rel="stylesheet" href="{{ 'main.css' | asset_url }}">
   <!-- Add your other meta tags, stylesheets, and scripts here -->
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="{{ 'favicon.png' | asset_url }}">
+
+  <!-- Custom CSS for this theme -->
+  <link rel="stylesheet" href="{{ 'custom.css' | asset_url }}">
+
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="{{ page.metafields.description }}">
+  <meta name="keywords" content="{{ page.metafields.keywords }}">
+
+  <!-- Social Meta Tags (for sharing) -->
+  <meta property="og:title" content="{{ page_title }}">
+  <meta property="og:description" content="{{ page.metafields.description }}">
+  <meta property="og:image" content="{{ page.image | img_url: '1200x1200' }}">
+  <meta property="og:url" content="{{ canonical_url }}">
 </head>
 <body>
   <!-- Header -->
@@ -27,10 +43,32 @@
 
   <!-- Footer -->
   <footer>
-    <p>&copy; {{ 'now' | date: '%Y' }} Friz AI</p>
+    <p>&copy; {{ 'now' | date: '%Y' }} {{ shop.name }}</p>
+    <!-- Add your footer links or other content here -->
+
+    <!-- Contact Information -->
+    <address>
+      <p>Contact Us: <a href="mailto:{{ shop.email }}">{{ shop.email }}</a></p>
+      <p>Phone: {{ shop.phone }}</p>
+      <p>Address: {{ shop.address }}</p>
+    </address>
   </footer>
 
   <!-- Add your scripts and other elements here -->
+
+  <!-- Google Analytics or other tracking scripts -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+    gtag('config', 'GA_MEASUREMENT_ID');
+  </script>
+
+  <!-- Custom JavaScript -->
+  <script src="{{ 'custom.js' | asset_url }}"></script>
 </body>
 </html>
 
