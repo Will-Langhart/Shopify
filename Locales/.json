@@ -1,1 +1,45 @@
+{
+  "en": {
+    "common": {
+      "welcome_message": "Welcome to our store",
+      "search_placeholder": "Search products...",
+      "copyright_text": "&copy; {{ 'now' | date: '%Y' }} Friz AI. All rights reserved."
+    },
+    "header": {
+      "home": "Home",
+      "about_us": "About Us",
+      "services": "Services",
+      "contact": "Contact"
+    },
+    "footer": {
+      "follow_us": "Follow Us",
+      "social_media": {
+        "facebook": "Facebook",
+        "twitter": "Twitter",
+        "instagram": "Instagram"
+      }
+    }
+  },
+  "fr": {
+    "common": {
+      "welcome_message": "Bienvenue dans notre boutique",
+      "search_placeholder": "Rechercher des produits...",
+      "copyright_text": "&copy; {{ 'now' | date: '%Y' }} Friz AI. Tous droits réservés."
+    },
+    "header": {
+      "home": "Accueil",
+      "about_us": "À propos de nous",
+      "services": "Services",
+      "contact": "Contact"
+    },
+    "footer": {
+      "follow_us": "Suivez-nous",
+      "social_media": {
+        "facebook": "Facebook",
+        "twitter": "Twitter",
+        "instagram": "Instagram"
+      }
+    }
+  }
+}
 
