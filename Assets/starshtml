@@ -1,0 +1,117 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Friz AI Home</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            background: #000;
+            overflow: hidden;
+        }
+
+        .header-logo {
+            width: 200px;
+            animation: pulse 2s infinite;
+            display: block;
+            margin: 50px auto;
+            position: relative;
+            z-index: 10;
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+        }
+
+        .star {
+            position: absolute;
+            border-radius: 50%;
+            background-color: white;
+            width: 3px;
+            height: 3px;
+            opacity: 0.8;
+            animation: twinkle 2s infinite alternate;
+            z-index: 1;
+        }
+
+        @keyframes twinkle {
+            0%, 100% {
+                opacity: 0.8;
+            }
+            50% {
+                opacity: 0;
+            }
+        }
+
+        .shooting-star {
+            position: absolute;
+            background: linear-gradient(45deg, rgba(255,255,255,0.2), rgba(255,255,255,1), rgba(255,255,255,0));
+            width: 2px;
+            height: 100px;
+            z-index: 0;
+            opacity: 0;
+            will-change: transform;
+            animation: shootingStar 0.75s forwards;
+        }
+
+        @keyframes shootingStar {
+            to {
+                opacity: 1;
+                transform: translateX(300px) translateY(150px);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <script>
+        function createTwinklingStars() {
+            const numberOfStars = 100;
+            for (let i = 0; i < numberOfStars; i++) {
+                const star = document.createElement('div');
+                star.classList.add('star');
+                star.style.width = `${Math.random() * 3 + 1}px`;
+                star.style.height = star.style.width;
+                star.style.top = `${Math.random() * window.innerHeight}px`;
+                star.style.left = `${Math.random() * window.innerWidth}px`;
+                
+                const duration = Math.random() * (3 - 1) + 1; // Duration between 1s and 3s
+                star.style.animationDuration = `${duration}s`;
+                star.style.animationDelay = `${Math.random() * 2}s`; // Delay between 0s and 2s
+
+                document.body.appendChild(star);
+            }
+        }
+
+        function createShootingStar() {
+            const star = document.createElement('div');
+            star.classList.add('shooting-star');
+            star.style.left = `${Math.random() * window.innerWidth}px`;
+            star.style.top = `${Math.random() * window.innerHeight * 0.5}px`; // Limit to upper half of the view
+            document.body.appendChild(star);
+
+            // Remove the shooting star after animation completes
+            setTimeout(() => {
+                document.body.removeChild(star);
+            }, 750); // Match the duration of the shootingStar animation
+        }
+
+        function resizeStarfield() {
+            document.querySelectorAll('.star').forEach(star => {
+                star.style.top = `${Math.random() * window.innerHeight}px`;
+                star.style.left = `${Math.random() * window.innerWidth}px`;
+            });
+        }
+
+        createTwinklingStars();
+        window.onresize = resizeStarfield;
+        setInterval(createShootingStar, 2000);
+    </script>
