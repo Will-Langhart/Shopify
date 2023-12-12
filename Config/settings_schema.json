@@ -1,1 +1,83 @@
-
+{
+  "name": "Theme Settings",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Header Settings"
+    },
+    {
+      "type": "text",
+      "label": "Header Text",
+      "id": "header_text",
+      "default": "Welcome to our store"
+    },
+    {
+      "type": "color",
+      "label": "Header Background Color",
+      "id": "header_bg_color",
+      "default": "#333"
+    },
+    {
+      "type": "color",
+      "label": "Header Text Color",
+      "id": "header_text_color",
+      "default": "#fff"
+    },
+    {
+      "type": "select",
+      "label": "Header Layout",
+      "id": "header_layout",
+      "options": [
+        "Default",
+        "Centered",
+        "Full Width"
+      ],
+      "default": "Default"
+    },
+    {
+      "type": "checkbox",
+      "label": "Show Header Search",
+      "id": "show_header_search",
+      "default": true
+    },
+    {
+      "type": "header",
+      "content": "Footer Settings"
+    },
+    {
+      "type": "textarea",
+      "label": "Footer Copyright Text",
+      "id": "footer_copyright",
+      "default": "&copy; {{ 'now' | date: '%Y' }} Friz AI. All rights reserved."
+    },
+    {
+      "type": "color",
+      "label": "Footer Background Color",
+      "id": "footer_bg_color",
+      "default": "#f4f4f4"
+    },
+    {
+      "type": "image_picker",
+      "label": "Footer Logo",
+      "id": "footer_logo",
+      "default": null
+    },
+    {
+      "type": "select",
+      "label": "Footer Layout",
+      "id": "footer_layout",
+      "options": [
+        "Default",
+        "Centered",
+        "Full Width"
+      ],
+      "default": "Default"
+    },
+    {
+      "type": "checkbox",
+      "label": "Show Social Media Icons",
+      "id": "show_social_icons",
+      "default": true
+    }
+  ]
+}
